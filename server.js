@@ -42,7 +42,7 @@ app.get('/', function (req, res) {
   res.send('Welcome to Immigrow Server')
 })
 
-app.use('/api/users', usersRouter)
+app.use('/api/user', usersRouter)
 app.use('/tutors', tutorsRouter)
 app.use('/mentors', mentorsRouter)
 app.use('/api', require('./routes/api/posts'))
