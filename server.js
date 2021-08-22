@@ -1,6 +1,5 @@
 require('dotenv').config()
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 require('./config/database');
 const cors = require('cors')
@@ -39,6 +38,9 @@ const usersRouter = require('./routes/api/users')
 const tutorsRouter = require('./routes/api/users')
 const mentorsRouter = require('./routes/mentors')
 
+app.get('/', function (req, res) {
+  res.send('Welcome to Immigrow Server')
+})
 
 app.use('/api/users', usersRouter)
 app.use('/tutors', tutorsRouter)
